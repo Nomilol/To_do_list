@@ -3,35 +3,83 @@
 $(document).ready(function() {
 
 
-	$('button').on('click', function(){
+	$('.add').on('click', function(){
 
 		var ajouter = $('input[name=list]').val();
+		console.log(ajouter);
 
-		$( "ul" ).append('<li>' + '<input type="checkbox" id="check">' + '<label class="strikethrough">' + ajouter +'</label>' + '</li>');
+		$( "ul" ).append('<li class="aDetacher">' + '<input type="checkbox" class="check">' + '<label class="barrer">' + ajouter +'</label>' + '</li>');
+
+	});
+
+	$('.btn1').on('click', function(){
+
+		var verif = $('input[type=checkbox]:checked').is(':checked');
+
+		console.log(verif);
+		
+		if (verif === true) { 
+
+			$('input[type=checkbox]:checked').hide("slow");
+
+			} else {
+
+				$('').show("slow");
+			}
 
 
 
 	});
 
+	$('.btn2').on('click', function(){
 
-	// var test = function () {
-	// 	return $('#check').is(':checked');
-	//  } 
+
+	});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	// var btn1; 
+	// var btn2;
 	
- //  	if () {
+	
+	// $('.btn1').on('click', function(){
+	// 	if (btn1) {
+	// 		btn1.appendTo("ul");
+	// 		btn1 = null;
 
- //  		$('li').css('text-decoration', 'line-through')
-  		
+	// 	} else {
 
- //  	} else {
+	// 		btn1 = $('.aDetacher').detach();
+	// 	}
+	// });
 
- //  		$('li').css('text-decoration', 'none')
- //  	}
 
- 
+	// $('.btn2').on('click', function(){
 
-  	//$("input[type=checkbox]").on("click", test);
+	// 	if (btn2)	 {
+	// 		btn2.appendTo("ul");
+	// 		btn2 = null;
 
+	// 	} else {
+
+	// 		btn2 = $('.aDetacher').detach();
+	// 	}
+	// });
+
+	// function verif(){
+	// 	return $('input[type=checkbox]').is(':checked'); 
+	// 	console.log(!verif());
+	// }
 });
-
 

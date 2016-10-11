@@ -16,7 +16,13 @@ p {
 }
 
 
-input[type=checkbox]:checked + label.strikethrough {
+input[type=checkbox]:checked + label.barrer {
 	text-decoration: line-through;
 
 }
+
+li:checked {
+	display: none;
+}
+
+
