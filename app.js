@@ -8,7 +8,7 @@ $(document).ready(function() {
 		var ajouter = $('input[name=list]').val();
 		console.log(ajouter);
 
-		$( "ul" ).append('<li class="aDetacher">' + '<input type="checkbox" class="check">' + '<label class="barrer">' + ajouter +'</label>' + '</li>');
+		$( "ul" ).append('<li class="aDetacher">' + '<input type="checkbox" class="check">' + '<label name="label" class="barrer">' + ajouter +'</label>' + '</li>');
 
 	});
 
@@ -21,11 +21,8 @@ $(document).ready(function() {
 		if (verif === true) { 
 
 			$('input[type=checkbox]:checked').hide("slow");
-
-			} else {
-
-				$('').show("slow");
-			}
+			$($('input[type=checkbox]:checked').next("label")).hide("slow");
+			} 
 
 
 
