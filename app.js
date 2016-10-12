@@ -49,15 +49,12 @@ $(document).ready(function() {
 
 		
 		var verif2 = $('input[type=checkbox]').is(':checked');
-		console.log(verif2);
 
 		if (verif2 === true) { 
 
 			$('input[type=checkbox]:checked').toggle("slow");
 			$($('input[type=checkbox]:checked').next("label")).toggle("slow");
 		}
-
-		checked();
 
 
 	});
